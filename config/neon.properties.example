@@ -1,0 +1,4 @@
+# Copy to config/neon.properties and replace these placeholders.
+NEON_DB_URL=jdbc:postgresql://YOUR_NEON_HOST/neondb?sslmode=require&channelBinding=require
+NEON_DB_USERNAME=YOUR_NEON_USERNAME
+NEON_DB_PASSWORD=YOUR_NEON_PASSWORD
