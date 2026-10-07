@@ -1,0 +1,9 @@
+.git
+.idea
+target
+HELP.md
+a.txt
+config/neon.properties
+*.env
+*.iml
+.DS_Store
