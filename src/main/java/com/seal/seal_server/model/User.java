@@ -40,11 +40,11 @@ public class User {
         this.id = id;
     }
 
-    private String getFullName(){
+    public String getFullName(){
         return fullName;
     }
 
-    private void setFullName(String fullName){
+    public void setFullName(String fullName){
         this.fullName = fullName;
     }
 

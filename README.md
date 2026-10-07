@@ -52,3 +52,7 @@ JavaFX should call this backend over HTTP; database credentials stay here.
 
 The health endpoint confirms API availability; the integration test separately
 confirms database connectivity. Authentication and exam APIs are still to be built.
+
+
+
+
