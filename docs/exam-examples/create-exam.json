@@ -1,0 +1,23 @@
+{
+  "title": "Computing Fundamentals",
+  "subject": "Computing",
+  "subjectCode": "CS101",
+  "durationMinutes": 30,
+  "instructions": "Answer both questions. Submit before the timer expires.",
+  "status": "PUBLISHED",
+  "questions": [
+    {
+      "type": "MCQ",
+      "questionText": "Which format does the SEAL REST API use?",
+      "marks": 2,
+      "options": ["JSON", "FXML", "CSS", "JDBC"],
+      "correctOptionIndex": 0
+    },
+    {
+      "type": "TEXT",
+      "questionText": "Explain why the desktop client calls the API instead of PostgreSQL.",
+      "marks": 5,
+      "referenceAnswer": "Authorization and business rules are enforced on the server; database credentials remain server-side."
+    }
+  ]
+}

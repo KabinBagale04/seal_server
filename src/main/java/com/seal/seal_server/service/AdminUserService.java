@@ -35,6 +35,8 @@ public class AdminUserService {
             throw new IllegalArgumentException("Full name, username, password and role are required.");
         }
 
+        if (request.role() == UserRole.ADMIN)
+            throw new IllegalArgumentException("Only TEACHER and STUDENT accounts can be created.");
         String username = request.username().trim();
         if (userRepository.findByUsername(username).isPresent()) {
             throw new IllegalArgumentException("Username already exists.");
@@ -82,6 +84,7 @@ public class AdminUserService {
         user.setActive(active);
         User savedUser = userRepository.save(user);
 
+        if (!active) sessionService.removeUserSessions(userId);
         return new UserResponse(
                 savedUser.getId(),
                 savedUser.getFullName(),
@@ -91,4 +94,3 @@ public class AdminUserService {
         );
     }
 }
-

@@ -32,6 +32,8 @@ public class SessionService {
     public void removeSession(String token){
         sessions.remove(token);
     }
+    public void removeUserSessions(Long userId) {
+        sessions.entrySet().removeIf(entry -> entry.getValue().equals(userId));
+    }
 }
-
 

@@ -62,7 +62,7 @@ public class AdminUserController {
         Optional<User> currentUser =
                 userRepository.findById(adminId.get());
 
-        if (currentUser.isEmpty()) {
+        if (currentUser.isEmpty() || !currentUser.get().isActive()) {
             return ResponseEntity
                     .status(401)
                     .body("Invalid session.");
@@ -111,7 +111,7 @@ public class AdminUserController {
         Optional<User> currentUser =
                 userRepository.findById(userId.get());
 
-        if (currentUser.isEmpty()) {
+        if (currentUser.isEmpty() || !currentUser.get().isActive()) {
             return ResponseEntity
                     .status(401)
                     .body("Invalid session.");
@@ -167,7 +167,7 @@ public class AdminUserController {
         Optional<User> currentUser =
                 userRepository.findById(userId.get());
 
-        if (currentUser.isEmpty()) {
+        if (currentUser.isEmpty() || !currentUser.get().isActive()) {
             return ResponseEntity
                     .status(401)
                     .body("Invalid session.");
